@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: |
           rustup toolchain install nightly --profile minimal --component rustfmt --component clippy
       - uses: Swatinem/rust-cache@v2
@@ -34,7 +34,7 @@ jobs:
   check-docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: |
           rustup toolchain install stable --profile minimal
       - uses: Swatinem/rust-cache@v2
@@ -73,7 +73,7 @@ jobs:
             docker: false
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: |
           rustup toolchain install stable --profile minimal
       - uses: Swatinem/rust-cache@v2
